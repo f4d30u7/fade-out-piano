@@ -1,0 +1,101 @@
+{
+  "name": "Fade Out Piano",
+  "short_name": "Fade Out",
+  "description": "Practica deliberada, lectura a primera vista, teoria e improvisacion para piano.",
+  "lang": "es-AR",
+  "dir": "ltr",
+  "start_url": "./#hoy",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui",
+    "browser"
+  ],
+  "orientation": "any",
+  "background_color": "#06101c",
+  "theme_color": "#07111f",
+  "categories": [
+    "education",
+    "music",
+    "productivity"
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Practica de hoy",
+      "short_name": "Hoy",
+      "description": "Generar o retomar la practica del dia.",
+      "url": "./#hoy",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Lectura a primera vista",
+      "short_name": "Lectura",
+      "description": "Abrir el entrenador de lectura.",
+      "url": "./#lectura",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Teoria musical",
+      "short_name": "Teoria",
+      "description": "Abrir las lecciones y laboratorios de teoria.",
+      "url": "./#teoria",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/desktop.png",
+      "sizes": "1440x1107",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Panel diario de Fade Out Piano"
+    },
+    {
+      "src": "screenshots/mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Fade Out Piano en un telefono"
+    }
+  ]
+}

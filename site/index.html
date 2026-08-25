@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="application-name" content="Fade Out Piano" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Fade Out Piano" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="description" content="Fade Out Piano: práctica deliberada, lectura a primera vista, teoría e improvisación." />
+  <title>Fade Out Piano</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon-180.png" sizes="180x180" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="appShell" class="app-shell">
+    <aside class="sidebar" aria-label="Navegación principal">
+      <a class="brand" href="#hoy" data-route="hoy" aria-label="Fade Out Piano, inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-key key-a"></span>
+          <span class="brand-key key-b"></span>
+          <span class="brand-key key-c"></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Fade Out</strong>
+          <span>Piano</span>
+        </span>
+      </a>
+
+      <nav class="nav-list">
+        <button class="nav-item active" data-route="hoy"><span class="nav-symbol">◉</span><span>Hoy</span></button>
+        <button class="nav-item" data-route="semana"><span class="nav-symbol">▦</span><span>Semana</span></button>
+        <button class="nav-item" data-route="repertorio"><span class="nav-symbol">♫</span><span>Repertorio</span></button>
+        <button class="nav-item" data-route="laboratorio"><span class="nav-symbol">◇</span><span>Mi laboratorio</span></button>
+        <button class="nav-item" data-route="teoria"><span class="nav-symbol">∑</span><span>Teoría</span></button>
+        <button class="nav-item" data-route="improvisacion"><span class="nav-symbol">≈</span><span>Improvisación</span></button>
+        <button class="nav-item" data-route="lectura"><span class="nav-symbol">𝄞</span><span>Lectura</span></button>
+        <button class="nav-item" data-route="progreso"><span class="nav-symbol">↗</span><span>Progreso</span></button>
+        <button class="nav-item" data-route="ajustes"><span class="nav-symbol">⚙</span><span>Ajustes</span></button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="mini-profile">
+          <span class="avatar" id="sidebarAvatar">E</span>
+          <div>
+            <strong id="sidebarName">Esteban</strong>
+            <span id="sidebarLevel">Nivel en construcción</span>
+          </div>
+        </div>
+        <span class="version-badge" id="versionBadge">v1.1.0</span>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-title">
+          <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menú">☰</button>
+          <div>
+            <span class="eyebrow" id="pageEyebrow">Práctica deliberada</span>
+            <h1 id="pageTitle">Hoy</h1>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button class="session-pill install-pill hidden" id="installAppButton" type="button">Instalar app</button>
+          <button class="session-pill hidden" id="resumeSessionTop" type="button">▶ Retomar sesión</button>
+          <button class="icon-button" id="quickAddButton" title="Nueva actividad" aria-label="Nueva actividad">＋</button>
+        </div>
+      </header>
+
+      <main id="appView" class="app-view" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop" role="presentation">
+    <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-header">
+        <div>
+          <span class="eyebrow" id="modalEyebrow">Fade Out Piano</span>
+          <h2 id="modalTitle">Modal</h2>
+        </div>
+        <button class="icon-button ghost" id="modalClose" aria-label="Cerrar">×</button>
+      </header>
+      <div class="modal-body" id="modalBody"></div>
+      <footer class="modal-footer" id="modalFooter"></footer>
+    </section>
+  </div>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+  <div class="web-update-banner hidden" id="webUpdateBanner" role="status" aria-live="polite">
+    <div>
+      <strong>Hay una versión nueva disponible</strong>
+      <span>La actualización cambia la aplicación, no tu historial local.</span>
+    </div>
+    <div class="row wrap">
+      <button class="secondary-button" id="dismissWebUpdate" type="button">Más tarde</button>
+      <button class="primary-button" id="applyWebUpdate" type="button">Actualizar ahora</button>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+  <script src="v1.js" defer></script>
+  <script src="web.js" defer></script>
+  <noscript>
+    <div class="noscript-message">Fade Out Piano necesita JavaScript para funcionar.</div>
+  </noscript>
+</body>
+</html>
